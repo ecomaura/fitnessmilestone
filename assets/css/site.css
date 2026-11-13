@@ -88,3 +88,12 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}.reveal{opacity:0;transform:t
  .recognition-section .award-card{gap:5px}
  .recognition-section .award-card img{border-width:2px}
 }
+
+
+/* Larger Fitness Milestones logo on mobile */
+@media(max-width:560px){
+  .brand-logo{height:62px;max-width:min(78vw,235px)}
+}
+@media(max-width:360px){
+  .brand-logo{height:56px;max-width:calc(100vw - 82px)}
+}
