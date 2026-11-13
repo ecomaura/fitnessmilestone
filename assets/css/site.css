@@ -24,8 +24,13 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}.reveal{opacity:0;transform:t
 
 .founder-photo img{object-position:center 42%}.award-grid{align-items:stretch}.award-card{padding:0;background:transparent;box-shadow:none;min-height:0;overflow:hidden}.award-card img{display:block;width:100%;height:auto;object-fit:contain;border:7px solid #111;box-shadow:0 16px 35px #0002;border-radius:2px}.recognition-section{padding-top:90px;padding-bottom:100px}.founder-section{padding-top:95px;padding-bottom:95px}@media(max-width:760px){.award-card img{border-width:5px}}
 
-/* Brand logo */
-.brand-logo{display:block;height:64px;width:auto;object-fit:contain}
-.footer-brand .brand-logo{background:#fff;padding:6px 14px;border-radius:6px;height:76px}
+/* Brand logo + title */
+.brand{gap:12px;letter-spacing:0}
+.brand-logo{display:block;height:74px;width:auto;max-width:none;flex:none;object-fit:contain}
+.brand-title{display:flex;flex-direction:column;font:900 21px/1 Manrope,sans-serif;letter-spacing:-.02em;text-transform:uppercase;color:#36525b;white-space:nowrap}
+.brand-title b{color:#58a936;font-weight:900;margin-bottom:3px}
+.footer-brand .brand{align-items:center}
+.footer-brand .brand-logo{background:#fff;padding:4px 8px;border-radius:6px;height:84px}
+.footer-brand .brand-title{color:#fff;font-size:22px}
 .home-testimonials{background:#171817;color:#fff}.home-testimonials .section-title{color:#fff}.home-testimonials .section-copy{color:#c4c4c4}
-@media(max-width:760px){.brand-logo{height:54px}.footer-brand .brand-logo{height:68px}}
+@media(max-width:760px){.brand{gap:8px}.brand-logo{height:60px}.brand-title{font-size:15px}.brand-title b{margin-bottom:2px}.footer-brand .brand-logo{height:70px}.footer-brand .brand-title{font-size:17px}}
