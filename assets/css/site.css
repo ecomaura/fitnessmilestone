@@ -34,3 +34,42 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}.reveal{opacity:0;transform:t
 .footer-brand .brand-title{color:#fff;font-size:22px}
 .home-testimonials{background:#171817;color:#fff}.home-testimonials .section-title{color:#fff}.home-testimonials .section-copy{color:#c4c4c4}
 @media(max-width:760px){.brand{gap:8px}.brand-logo{height:60px}.brand-title{font-size:15px}.brand-title b{margin-bottom:2px}.footer-brand .brand-logo{height:70px}.footer-brand .brand-title{font-size:17px}}
+
+
+/* Mobile header and footer overflow fix */
+.brand{min-width:0;gap:0}
+.brand-logo{height:64px;width:auto;max-width:100%;object-fit:contain;flex:0 1 auto}
+.brand-title{display:none}
+.nav{min-width:0;gap:12px}
+.nav .brand{flex:0 1 auto;overflow:hidden}
+.menu{flex:0 0 auto}
+.footer-top{min-width:0}
+.footer-brand{min-width:0;max-width:100%}
+.footer-brand .brand{max-width:100%;width:max-content}
+.footer-brand .brand-logo{height:72px;max-width:100%;padding:0;background:transparent}
+.footer-links{min-width:0;max-width:100%;flex-wrap:wrap;row-gap:14px}
+.copyright{min-width:0;gap:12px;flex-wrap:wrap}
+.copyright span{min-width:0;overflow-wrap:anywhere}
+@media(max-width:850px){
+  header{height:76px}
+  .navlinks{top:75px;left:0;right:0;width:100%;max-width:100%;padding:22px max(18px,calc((100vw - 520px)/2));gap:18px;box-sizing:border-box}
+  .navlinks a{max-width:100%;overflow-wrap:anywhere}
+}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 32px)}
+  header{height:70px}
+  .nav{gap:8px}
+  .brand-logo{height:49px;max-width:min(70vw,190px)}
+  .menu{font-size:23px;padding:6px 0 6px 8px}
+  .navlinks{top:69px}
+  footer{padding:42px 0 22px}
+  .footer-top{gap:22px;padding-bottom:30px}
+  .footer-brand .brand-logo{height:58px;max-width:min(75vw,220px)}
+  .footer-brand p{max-width:100%;font-size:12px}
+  .footer-links{column-gap:18px;row-gap:13px;font-size:12px}
+  .copyright{font-size:10px}
+}
+@media(max-width:360px){
+  .brand-logo{height:44px;max-width:calc(100vw - 88px)}
+  .footer-brand .brand-logo{height:52px;max-width:100%}
+}
