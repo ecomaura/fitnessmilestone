@@ -5,7 +5,7 @@ burger.addEventListener('click',()=>setMenu(!links.classList.contains('open')));
 $$('a',links).forEach(a=>a.addEventListener('click',()=>setMenu(false)));
 addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
 addEventListener('resize',()=>{if(innerWidth>960)setMenu(false)});
-const onScroll=()=>hdr.classList.toggle('scrolled',scrollY>8);onScroll();addEventListener('scroll',onScroll,{passive:true});
+const pr=$('#progress'),par=$$('[data-par]'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let tk=false;const onScroll=()=>{hdr.classList.toggle('scrolled',scrollY>8);if(tk)return;tk=true;requestAnimationFrame(()=>{const m=document.documentElement.scrollHeight-innerHeight;pr.style.transform='scaleX('+(m>0?scrollY/m:0)+')';if(!rm&&scrollY<innerHeight*1.2)par.forEach(p=>p.style.transform='translateY('+(scrollY*.18)+'px)');tk=false})};onScroll();addEventListener('scroll',onScroll,{passive:true});
 $('#year').textContent=new Date().getFullYear();
 if('IntersectionObserver'in window){
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});$$('.reveal').forEach(el=>io.observe(el));
